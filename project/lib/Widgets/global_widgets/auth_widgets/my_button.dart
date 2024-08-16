@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
-
   final Color backgroundColor;
   final Color foregroundColor;
   final Widget? leadingSymbol;
@@ -19,8 +18,7 @@ class MyButton extends StatelessWidget {
     required this.width,
     required this.height,
     required this.onPressed,
-     
-     });
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -29,22 +27,19 @@ class MyButton extends StatelessWidget {
       height: height,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: backgroundColor,
-          foregroundColor: foregroundColor,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(25),
-          )
-        ),
+            backgroundColor: backgroundColor,
+            foregroundColor: foregroundColor,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(25),
+            )),
         onPressed: onPressed,
-        
         child: ListTile(
-          contentPadding: EdgeInsets.only(bottom: 15),
+          contentPadding: const EdgeInsets.only(bottom: 15),
           leading: leadingSymbol,
           title: Center(child: text),
           titleAlignment: ListTileTitleAlignment.center,
-          
         ),
-         ),
+      ),
     );
   }
 }
