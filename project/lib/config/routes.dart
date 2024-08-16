@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:project/auth/home_page.dart';
 import 'package:project/auth/sign_in_page.dart';
 import 'package:project/auth/sign_up_page.dart';
+import 'package:project/pages/fruits_home.dart';
 
 final Map<String, WidgetBuilder> routes = {
   '/home_page': (context) => const MyHomePage(),
   '/sign_in_page': (context) => MySignInPage(),
   '/sign_up_page': (context) => const MySignUpPage(),
+  '/fuites_home': (context) =>  FruitsHome(),
 };
