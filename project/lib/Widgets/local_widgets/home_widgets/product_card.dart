@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project/services/data_models/vegetables_home_page_data.dart';
 import 'package:project/utils/colors.dart';
-
 class ProductCard extends StatelessWidget {
   final ProductItem product;
   final Function() onButtonTap;
@@ -11,11 +10,11 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 140,
+      width: 150,
       child: GestureDetector(
         onTap: onCardTap,
         child: Card(
-          
+          elevation: 0,
           color: white,
           
 
@@ -37,8 +36,8 @@ class ProductCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                     
-                   Text(product.name,style: TextStyle(fontSize: 13,fontWeight: FontWeight.bold,color: item),),
-                   Text(product.unit,style: TextStyle(fontSize: 12,fontWeight: FontWeight.w500,color: itemInfo),)
+                   Text(product.name,style: TextStyle(fontSize: 14,fontWeight: FontWeight.w500,color: item,fontFamily: 'Gilroy',),),
+                   Text(product.unit,style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400,color: itemInfo),)
                     ],
                                      ),
                   

@@ -14,6 +14,6 @@ Widget logInButton(BuildContext context) {
       width: 330,
       height: 50,
       onPressed: () {
-        Navigator.pushNamed(context, '/fuites_home');
+        Navigator.pushNamed(context, '/app_home');
       });
 }

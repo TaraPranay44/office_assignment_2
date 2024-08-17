@@ -1,15 +1,16 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:project/Widgets/local_widgets/home_widgets/category_list.dart';
 import 'package:project/Widgets/local_widgets/home_widgets/product_list.dart';
 import 'package:project/Widgets/local_widgets/home_widgets/section_title.dart';
 import 'package:project/services/data_models/vegetables_home_page_data.dart';
 import 'package:project/utils/images.dart';
 
-class FruitsHome extends StatelessWidget {
+class ShopScreen extends StatelessWidget {
 
   final VegHomePageData data = VegHomePageData();
-   FruitsHome({super.key});
+   ShopScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +34,7 @@ class FruitsHome extends StatelessWidget {
             sectionTitle(context,data.title2 , '/best_selling_page'),
             productList(data.bestSelling),
             sectionTitle(context,data.title3 , '/groceries_page'),
+            CategoryList( data.category),
             productList(data.groceries),
 
 

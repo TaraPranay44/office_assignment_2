@@ -1,4 +1,6 @@
 
+import 'package:flutter/material.dart';
+import 'package:project/utils/colors.dart';
 import 'package:project/utils/images.dart';
 
 class ProductItem {
@@ -8,6 +10,13 @@ class ProductItem {
   final String unit;
 
   ProductItem({required this.name, required this.image, required this.price, required this.unit});
+}
+class CategoryItem {
+  final String name;
+  final String image;
+  final Color color;
+
+  CategoryItem({required this.name, required this.image, required this.color});
 }
 
 class VegHomePageData{
@@ -37,4 +46,14 @@ class VegHomePageData{
     ProductItem(name: "Beef Bone", image: mutton, price: "4.99", unit: "1kg, Priceg"),
     ProductItem(name: "Broiler Chicken", image: chicken, price: "4.99", unit: "1kg, Priceg"),
   ];
+
+  final List<CategoryItem> category = [
+    CategoryItem(name: "Pulses", image: pulses,color: groceryBox1),
+    CategoryItem(name: "Rice", image: rice,color: groceryBox2),
+    CategoryItem(name: "Pulses", image: pulses,color: groceryBox1),
+    CategoryItem(name: "Rice", image: rice,color: groceryBox2),
+   
+  ];
+
+
 }

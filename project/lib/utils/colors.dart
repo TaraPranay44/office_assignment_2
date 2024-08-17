@@ -19,5 +19,9 @@ Color item = Color(0xff181725);
 Color textbutton1 = Color(0xff8E97FD);
 Color itemInfo = Color(0xff7C7C7C);
 Color groceryItem = Color(0xff3E423F);
-Color groceryBox1 = Color(0xffF8A44C);
-Color groceryBox2 = Color(0xff8E97FD);
+Color groceryBox1 = Color.fromARGB(172, 238, 255, 224);
+Color groceryBox2 = Color.fromARGB(128, 224, 237, 250);
+
+
+//lighten any color
+

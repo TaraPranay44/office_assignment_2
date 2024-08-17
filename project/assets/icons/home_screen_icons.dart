@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:project/utils/colors.dart';
 
-Icon plus = Icon(Icons.add);
+Icon plus = Icon(Icons.add,color: white,size: 25,);
 Icon shop = Icon(Icons.shopping_bag_outlined);
 Icon explore = Icon(Icons.explore_outlined);
 Icon cart = Icon(Icons.shopping_cart_outlined);
