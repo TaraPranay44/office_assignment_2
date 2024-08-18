@@ -11,9 +11,7 @@ Widget productList(List<ProductItem>items){
        itemBuilder: (context,index){
         return ProductCard(product: items[index], onButtonTap: (){
           //logic for tapping button
-        }, onCardTap: (){
-          //logic for tapping card
-        });
+        },);
        },
        separatorBuilder: (context,index) => SizedBox(width: 6,),
          itemCount: items.length),

@@ -35,6 +35,7 @@ class ShopScreen extends StatelessWidget {
             productList(data.bestSelling),
             sectionTitle(context,data.title3 , '/groceries_page'),
             CategoryList( data.category),
+            SizedBox(height: 10,),
             productList(data.groceries),
 
 

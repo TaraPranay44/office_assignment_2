@@ -30,7 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  shadow: ^1.5.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -39,6 +39,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -74,6 +75,23 @@ flutter:
     - assets/images/rice.png
     - assets/images/silent_moon.png
     - assets/images/banner.png
+    - assets/icons/back_arrow.png
+    - assets/icons/send_icon.png
+    - assets/icons/down_arrow.png
+    - assets/icons/bookmark.png
+    - assets/icons/slide_icons.png
+    # explore screen images
+    - assets/images/explore_screen_images/bakery.png
+    - assets/images/explore_screen_images/beverages.png
+    - assets/images/explore_screen_images/diary.png
+    - assets/images/explore_screen_images/fruits.png
+    - assets/images/explore_screen_images/oil.png
+    - assets/images/explore_screen_images/meat.png
+    #explore screen icons
+    - assets/icons/explore_screen_icons/filter.png
+    - assets/icons/explore_screen_icons/search.png
+
+
 
 
 

@@ -15,3 +15,10 @@ String pulses = 'assets/images/pulses.png';
 String redCapsicum = 'assets/images/red_capsicum.png';
 String rice = 'assets/images/rice.png';
 String vegetablesBanner = 'assets/images/banner.png';
+
+String bakery = 'assets/images/explore_screen_images/bakery.png';
+String beverages = 'assets/images/explore_screen_images/beverages.png';
+String diary = 'assets/images/explore_screen_images/diary.png';
+String fruits = 'assets/images/explore_screen_images/fruits.png';
+String oil = 'assets/images/explore_screen_images/oil.png';
+String meat = 'assets/images/explore_screen_images/meat.png';

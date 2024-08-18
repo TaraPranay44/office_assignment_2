@@ -1,18 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:project/services/data_models/vegetables_home_page_data.dart';
 import 'package:project/utils/colors.dart';
-class ProductCard extends StatelessWidget {
+class ProductCard extends StatefulWidget {
   final ProductItem product;
   final Function() onButtonTap;
-  final Function() onCardTap;
-  const ProductCard({super.key, required this.product, required this.onButtonTap, required this.onCardTap});
+  
+  ProductCard({super.key, required this.product, required this.onButtonTap, });
 
+  @override
+  State<ProductCard> createState() => _ProductCardState();
+}
+
+class _ProductCardState extends State<ProductCard> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: 150,
       child: GestureDetector(
-        onTap: onCardTap,
+        onTap: (){
+          Navigator.pushNamed(context, '/product_details_page');
+        },
         child: Card(
           elevation: 0,
           color: white,
@@ -25,10 +32,10 @@ class ProductCard extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Image.asset(
-                  product.image,height: 90,width: 90,fit: BoxFit.contain,
+                  widget.product.image,height: 90,width: 90,fit: BoxFit.contain,
                 ),
                 
                   
@@ -36,8 +43,8 @@ class ProductCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                     
-                   Text(product.name,style: TextStyle(fontSize: 14,fontWeight: FontWeight.w500,color: item,fontFamily: 'Gilroy',),),
-                   Text(product.unit,style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400,color: itemInfo),)
+                   Text(widget.product.name,style: TextStyle(fontSize: 14,fontWeight: FontWeight.w500,color: item,fontFamily: 'Gilroy',),),
+                   Text(widget.product.unit,style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400,color: itemInfo),)
                     ],
                                      ),
                   
@@ -45,7 +52,7 @@ class ProductCard extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('\$${product.price}',style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600,color: item),),
+                    Text('\$${widget.product.price}',style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600,color: item),),
                     // SizedBox(width: 20,),
                 
                     
@@ -53,7 +60,7 @@ class ProductCard extends StatelessWidget {
                       // width: 40,
                       size: Size(40, 40),
                       child: ElevatedButton(onPressed: 
-                      onButtonTap, child: Icon(Icons.add,color: white,size: 25,),
+                      widget.onButtonTap, child: Icon(Icons.add,color: white,size: 25,),
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                         backgroundColor: buttonColor1,
