@@ -6,7 +6,7 @@ class ProductCategoryCard extends StatelessWidget {
   final Color color;
   final Color borderColor;
 
-  ProductCategoryCard({
+  const ProductCategoryCard({super.key, 
     required this.title,
     required this.imagePath,
     required this.color,
@@ -29,11 +29,11 @@ class ProductCategoryCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(imagePath, height: 70), // Adjust the height as needed
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               title,
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 
                 fontWeight: FontWeight.bold,
                 fontSize: 13,

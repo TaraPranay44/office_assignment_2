@@ -3,11 +3,13 @@ import 'package:project/src/Widgets/local_widgets/explore_screen_widgets/filter_
 import 'package:project/src/utils/colors.dart';
 
 class FilterPage extends StatefulWidget {
+  const FilterPage({super.key});
+
   @override
-  _FilterPageState createState() => _FilterPageState();
+  FilterPageState createState() => FilterPageState();
 }
 
-class _FilterPageState extends State<FilterPage> {
+class FilterPageState extends State<FilterPage> {
   bool isEggsChecked = true;
   bool isNoodlesChecked = false;
   bool isChipsChecked = false;
@@ -20,9 +22,11 @@ class _FilterPageState extends State<FilterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: white,
       appBar: AppBar(
+        backgroundColor: white,
         leading: IconButton(
-          icon: Icon(Icons.close),
+          icon: const Icon(Icons.close),
           onPressed: () {
             Navigator.pop(context); 
           },
@@ -34,7 +38,7 @@ class _FilterPageState extends State<FilterPage> {
       body: Container(
         decoration: BoxDecoration(
           color: fbgFill,
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(20.0),
             topRight: Radius.circular(20.0),
           ),
@@ -54,7 +58,7 @@ class _FilterPageState extends State<FilterPage> {
                         'Categories',
                         style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18,color: fText1),
                       ),
-                      SizedBox(height: 10,),
+                      const SizedBox(height: 10,),
                       buildCheckboxRow('Eggs', isEggsChecked, (value) {
                         setState(() {
                           isEggsChecked = value!;
@@ -75,13 +79,13 @@ class _FilterPageState extends State<FilterPage> {
                           isFastFoodChecked = value!;
                         });
                       }),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                     
                       Text(
                         'Brand',
                         style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18,color: fText1),
                       ),
-                      SizedBox(height: 10,),
+                      const SizedBox(height: 10,),
                       buildCheckboxRow('Individual Collection', isIndividualChecked, (value) {
                         setState(() {
                           isIndividualChecked = value!;
@@ -116,7 +120,7 @@ class _FilterPageState extends State<FilterPage> {
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue.shade300,
-                  padding: EdgeInsets.symmetric(vertical: 15),
+                  padding: const EdgeInsets.symmetric(vertical: 15),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
                   ),

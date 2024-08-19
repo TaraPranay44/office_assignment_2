@@ -10,7 +10,9 @@ class ExploreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: white,
       appBar: AppBar(
+        backgroundColor: white,
         title: Center(child: Text('Find Products', style: TextStyle(color: eText1,fontFamily: 'Gilroy',fontWeight: FontWeight.w300,fontSize: 18),)),
         automaticallyImplyLeading: false,
       ),
@@ -21,7 +23,7 @@ class ExploreScreen extends StatelessWidget {
             child: Row(
               children: [
                 Expanded(
-  child: Container(
+  child: SizedBox(
     height: 50, // Adjust the height as needed
     child: TextField(
       decoration: InputDecoration(
@@ -32,13 +34,13 @@ class ExploreScreen extends StatelessWidget {
         prefixIcon: Image.asset(search),
         border: InputBorder.none, // No border by default
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(
+          borderSide: const BorderSide(
             color: Colors.transparent, // Keeps it borderless when not focused
           ),
           borderRadius: BorderRadius.circular(10),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(
+          borderSide: const BorderSide(
             color: Colors.blue, // Border color when focused
           ),
           borderRadius: BorderRadius.circular(10),
@@ -48,7 +50,7 @@ class ExploreScreen extends StatelessWidget {
   ),
 )
 ,
-                SizedBox(width: 4),
+                const SizedBox(width: 4),
                 IconButton(
                   icon: Image.asset(filter,width: 18,height: 18),
                   onPressed: () {

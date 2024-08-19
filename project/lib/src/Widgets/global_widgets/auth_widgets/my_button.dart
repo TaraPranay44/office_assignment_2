@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:project/src/utils/colors.dart';
+
 
 class MyButton extends StatelessWidget {
   final Color backgroundColor;
@@ -27,14 +30,16 @@ class MyButton extends StatelessWidget {
       height: height,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
+          elevation: 0,
             backgroundColor: backgroundColor,
             foregroundColor: foregroundColor,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(25),
+              side:  BorderSide(color: black12, width: 0.5),
+              borderRadius: BorderRadius.circular(30.h),
             )),
         onPressed: onPressed,
         child: ListTile(
-          contentPadding: const EdgeInsets.only(bottom: 15),
+          contentPadding:  EdgeInsets.only(bottom: 20.h, right: 20.w,),
           leading: leadingSymbol,
           title: Center(child: text),
           titleAlignment: ListTileTitleAlignment.center,

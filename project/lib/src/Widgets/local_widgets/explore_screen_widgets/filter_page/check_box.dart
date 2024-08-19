@@ -16,7 +16,7 @@ Widget buildCheckboxRow(String title, bool value, ValueChanged<bool?> onChanged)
           activeColor: boxFill,
             // side: BorderSide(color: boxBorder,width: 3),
           side: WidgetStateBorderSide.resolveWith(
-        (states) => BorderSide(
+        (states) => const BorderSide(
           color: Colors.green, // Green border when unchecked
           width: 1, // Border thickness
         ),
@@ -30,7 +30,7 @@ Widget buildCheckboxRow(String title, bool value, ValueChanged<bool?> onChanged)
         },
       ),
     
-          visualDensity: VisualDensity(horizontal: -3, vertical: -3),
+          visualDensity: const VisualDensity(horizontal: -3, vertical: -3),
           ),
           
         

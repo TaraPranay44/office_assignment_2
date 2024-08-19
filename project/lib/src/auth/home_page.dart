@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:project/src/Widgets/global_widgets/auth_widgets/my_button.dart';
 import 'package:project/src/services/data_models/auth_home_page_data.dart';
 import 'package:project/src/utils/colors.dart';
@@ -14,73 +15,89 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   HomePage homePage = HomePage(); //Homepage data
+
   @override
   Widget build(BuildContext context) {
+    // final screenHeight = MediaQuery.of(context).size.height;
+    // final screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: AppBar(
-        title: homePage.titleImage,
-        centerTitle: true,
-        backgroundColor: white,
+      backgroundColor: white,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(60.h),
+        child: Container(
+          padding: EdgeInsets.only(top: 20.h),
+          child: AppBar(
+            title: homePage.titleImage,
+            centerTitle: true,
+            backgroundColor: white,
+            
+          ),
+        ),
       ),
-      body: Column(
-        children: [
-          const SizedBox(
-            height: 40,
-          ),
-          homePage.centerImage,
-          const SizedBox(
-            height: 55,
-          ),
-          Text(
-            homePage.heading,
-            style: headingText,
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          Text(
-            homePage.subHeading1,
-            style: subHeadingText,
-          ),
-          Text(
-            homePage.subHeading2,
-            style: subHeadingText,
-          ),
-          const SizedBox(
-            height: 35,
-          ),
-          MyButton(
-              backgroundColor: buttonColor1,
-              foregroundColor: white,
-              text: Text(
-                homePage.signUpButtonText,
-                style: buttonLightText,
-              ),
-              width: 330,
-              height: 50,
-              onPressed: () {
-                Navigator.pushNamed(context, signInPageRoute);
-              }),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                homePage.lowerText,
-                style: outerText,
-              ),
-              TextButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, signInPageRoute);
-                },
-                child: Text(
-                  homePage.textButton,
-                  style: textButton,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+             SizedBox(
+              height: 60.h,
+            ),
+            homePage.centerImage,
+            SizedBox(
+              height: 70.h,
+            ),
+            Text(
+              homePage.heading,
+              style: headingText,
+            ),
+             SizedBox(
+              height: 15.h,
+            ),
+            Text(
+              homePage.subHeading1,
+              style: subHeadingText,
+            ),
+            Text(
+              homePage.subHeading2,
+              style: subHeadingText,
+            ),
+             SizedBox(
+              height: 60.h,
+            ),
+            MyButton(
+                backgroundColor: buttonColor1,
+                foregroundColor: white,
+                text: Text(
+                  homePage.signUpButtonText,
+                  style: buttonLightText,
                 ),
-              )
-            ],
-          )
-        ],
+                width: 360.w,
+                height: 55.h,
+                onPressed: () {
+                  Navigator.pushNamed(context, signUpPageRoute);
+                }),
+                // SizedBox(height: 10.h,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  homePage.lowerText,
+                  style: outerText,
+                ),
+                TextButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, signInPageRoute);
+                    // print('height is $screenHeight');
+                    // print('width is $screenWidth');
+                  },
+                  child: Text(
+                    homePage.textButton,
+                    style: textButton,
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

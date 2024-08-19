@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project/src/utils/colors.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyTextField extends StatelessWidget {
   final String hintText;
@@ -8,26 +9,28 @@ class MyTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 15, right: 15),
+      padding:  EdgeInsets.only(left: 20.w, right: 20.w),
       child: TextField(
+        
         decoration: InputDecoration(
+          
             filled: true,
             fillColor: textFieldColor1,
             hintText: hintText,
-            hintStyle: const TextStyle(color: Colors.black26),
+            hintStyle: TextStyle(color: black26),
             border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(12.w),
             ),
             enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(12),
-              borderSide: BorderSide(color: Colors.grey[200]!, width: 1),
+              borderRadius: BorderRadius.circular(12.w),
+              borderSide: BorderSide(color: textFieldtext, width: 1),
             ),
             focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(12),
-              borderSide: const BorderSide(color: Colors.blue, width: 1),
+              borderRadius: BorderRadius.circular(12.w),
+              borderSide:  BorderSide(color: textFieldborder, width: 1),
             ),
             contentPadding:
-                const EdgeInsets.symmetric(horizontal: 16, vertical: 14)),
+                 EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h)),
       ),
     );
   }

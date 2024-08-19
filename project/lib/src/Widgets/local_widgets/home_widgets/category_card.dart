@@ -22,9 +22,9 @@ class CategoryCard extends StatelessWidget {
           child: Row(
             // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              SizedBox(width: 10,),
+              const SizedBox(width: 10,),
               Image.asset(category.image,height: 60,width: 60,),
-              SizedBox(width: 15,),
+              const SizedBox(width: 15,),
               Text(category.name,style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600,color: item),)
             ],
           ),

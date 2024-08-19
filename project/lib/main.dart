@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:project/src/auth/home_page.dart';
 import 'package:project/src/config/routes.dart';
 
@@ -11,12 +12,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'assignment-2',
-      home: const MyHomePage(),
-      // initialRoute: '/' ,
-      routes: routes,
+    
+    return ScreenUtilInit(
+      designSize: const Size(411, 890),
+      minTextAdapt: true, 
+      splitScreenMode: true,
+      
+      builder: (context,child) => MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'assignment-2',
+        home: const MyHomePage(),
+        routes: routes,
+        
+      ),
     );
   }
 }

@@ -1,9 +1,9 @@
 
-String send_icon = 'assets/icons/send_icon.png';
+String sendIcon = 'assets/icons/send_icon.png';
 String bookmark = 'assets/icons/bookmark.png';
-String down_arrow = 'assets/icons/down_arrow.png';
-String back_arrow = 'assets/icons/back_arrow.png';
-String slide_icon = 'assets/icons/slide_icons.png';
+String downArrow = 'assets/icons/down_arrow.png';
+String backArrow = 'assets/icons/back_arrow.png';
+String slideIcon = 'assets/icons/slide_icons.png';
 
 
 // explore screen icons 

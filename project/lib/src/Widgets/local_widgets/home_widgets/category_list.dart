@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:project/src/Widgets/local_widgets/home_widgets/category_card.dart';
 import 'package:project/src/services/data_models/shop_page_data.dart';
 
-Widget CategoryList(List<CategoryItem>items){
+Widget categoryList(List<CategoryItem>items){
   return SizedBox(
     height: 90,
     width: double.infinity,
@@ -16,7 +16,7 @@ Widget CategoryList(List<CategoryItem>items){
           //logic for tapping card
         },);
        },
-       separatorBuilder: (context,index) => SizedBox(width: 6,),
+       separatorBuilder: (context,index) => const SizedBox(width: 6,),
          itemCount: items.length),
   );
 }
