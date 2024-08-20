@@ -61,14 +61,14 @@ class MySignInPage extends StatelessWidget {
             ),
             logInButton(context),
             forgotPassword,
-            const SizedBox(
-              height: 20,
+             SizedBox(
+              height: 20.h,
             ),
             
           ],
         ),
       ),
-      bottomSheet: Container(
+      bottomNavigationBar : Container(
         color: white,
         child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,

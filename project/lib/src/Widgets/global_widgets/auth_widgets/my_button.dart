@@ -25,9 +25,10 @@ class MyButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: width,
-      height: height,
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 20.h),
+      // width: width,
+      // height: height,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           elevation: 0,
@@ -39,7 +40,7 @@ class MyButton extends StatelessWidget {
             )),
         onPressed: onPressed,
         child: ListTile(
-          contentPadding:  EdgeInsets.only(bottom: 20.h, right: 20.w,),
+          // contentPadding:  EdgeInsets.only(bottom: 20.h, right: 20.w,),
           leading: leadingSymbol,
           title: Center(child: text),
           titleAlignment: ListTileTitleAlignment.center,
