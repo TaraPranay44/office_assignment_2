@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project/src/Widgets/local_widgets/explore_screen_widgets/filter_page/filter_screen_as_bottom_sheet.dart';
 import 'package:project/src/Widgets/local_widgets/explore_screen_widgets/product_category_card.dart';
 import 'package:project/src/utils/colors.dart';
 import 'package:project/src/utils/icons.dart';
@@ -54,7 +55,12 @@ class ExploreScreen extends StatelessWidget {
                 IconButton(
                   icon: Image.asset(filter,width: 18,height: 18),
                   onPressed: () {
-                    Navigator.pushNamed(context, '/filters_page');
+                    // Navigator.pushNamed(context, '/filters_page');
+                    Scaffold.of(context).showBottomSheet(
+                      (BuildContext context){
+                        return FilterBottomSheet();
+                      } 
+                    );
                   },
                 ),
               ],
