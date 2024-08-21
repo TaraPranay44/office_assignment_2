@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:project/src/auth/home_page.dart';
+import 'package:project/src/auth/auth_pages/home_page.dart';
 import 'package:project/src/config/routes.dart';
 
 void main() {

@@ -114,6 +114,7 @@ flutter:
       fonts:
         - asset: assets/fonts/gilroy/Gilroy-Bold.ttf
         - asset: assets/fonts/gilroy/Gilroy-Medium.ttf
+          weight: 400
         - asset: assets/fonts/gilroy/Gilroy-Regular.ttf
         - asset: assets/fonts/gilroy/Gilroy-Light.ttf
         - asset: assets/fonts/gilroy/Gilroy-Thin.ttf

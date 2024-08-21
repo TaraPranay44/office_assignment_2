@@ -6,6 +6,7 @@ Color buttonColor3 = const Color(0xffEBEAEC);
 Color textColor1 = const Color(0xff3F414E);
 Color textColor2 = const Color(0xffF6F1FB);
 Color textColor3 = const Color(0xffA1A4B2);
+// Color textColor3 = Colors.blue;
 
 Color white = Colors.white;
 
